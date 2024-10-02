@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tourism Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="e.g. 99 88 776655">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <input type="submit" class="submit-button" value="Send">
+            </form>
+        </section>
+        <section class="address">
+            <h2>Our Address</h2>
+            <p>123, Tourism Management Street, New York, USA</p>
+            <p>Phone: 99 88 776655, 99 88 776644</p>
+            <p>Email: <a href="mailto:support@travel.com">support@travel.com</a></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

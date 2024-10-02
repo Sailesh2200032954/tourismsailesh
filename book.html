@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book - Tourism Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking-section">
+            <h1>Book a Table</h1>
+            <div id="restaurant-details"></div>
+            <form class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+
+                <button type="submit" class="book-now">Confirm Booking</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tourism Management</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const restaurantName = urlParams.get('category');
+
+        // Display restaurant details
+        const restaurantDetails = document.getElementById('restaurant-details');
+        restaurantDetails.innerHTML = `<h2>${restaurantName}</h2>`;
+    </script>
+</body>
+</html>
